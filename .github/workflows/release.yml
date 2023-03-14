@@ -2,30 +2,32 @@
 # They are provided by a third-party and are governed by
 # separate terms of service, privacy policy, and support
 # documentation.
+# this will work and be enabled as soon as I publish plotalyzer on maven central
 
-name: release
 
-on:
-  push:
-    branches: [ "master" ]
+#name: release
 
-permissions:
-  contents: read
+#on:
+#  push:
+#    branches: [ "master" ]
 
-jobs:
-  build:
+#permissions:
+#  contents: read
 
-    runs-on: ubuntu-latest
+#jobs:
+#  build:
 
-    steps:
-    - uses: actions/checkout@v3
-    - name: Set up JDK 11
-      uses: actions/setup-java@v3
-      with:
-        java-version: '11'
-        distribution: 'temurin'
-        cache: 'sbt'
-    - name: stage
-      run: sbt stage
-    - name: package
-      run: sbt package
+#    runs-on: ubuntu-latest
+
+#    steps:
+#    - uses: actions/checkout@v3
+#    - name: Set up JDK 11
+#      uses: actions/setup-java@v3
+#      with:
+#        java-version: '11'
+#        distribution: 'temurin'
+#        cache: 'sbt'
+#    - name: stage
+#      run: sbt stage
+#    - name: package
+#      run: sbt package
