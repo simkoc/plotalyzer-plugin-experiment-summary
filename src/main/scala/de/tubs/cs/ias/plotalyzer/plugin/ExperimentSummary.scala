@@ -1,18 +1,21 @@
 package de.tubs.cs.ias.plotalyzer.plugin
 
-import de.tubs.cs.ias.plotalyzer.database.entities.Experiment
-import de.tubs.cs.ias.plotalyzer.plugins.AnalysisPlugin
-import spray.json.{JsObject, JsString, JsValue}
+import de.tubs.cs.ias.plotalyzer.plugins.{
+  AnalysisContext,
+  AnalysisPlugin,
+  AnalysisReturn,
+  JSONReturn
+}
+import spray.json.{JsObject, JsString}
 
 class ExperimentSummary extends AnalysisPlugin {
 
-  override def analyze(experiment: Experiment): Either[Exception, JsValue] = {
+  override def analyze(
+      context: AnalysisContext): Either[Exception, AnalysisReturn] = {
     try {
-      Right(JsObject("test" -> JsString("success")))
+      Right(JSONReturn(JsObject("test" -> JsString("version 0.0.2"))))
     } catch {
-      case e : Exception => Left(e)
+      case e: Exception => Left(e)
     }
   }
-
-
 }
