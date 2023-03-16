@@ -12,7 +12,7 @@ libraryDependencies ++= Seq(
   "org.wvlet.airframe"     %% "airframe-log"            % "21.2.0",
   "org.slf4j"              %  "slf4j-nop"               % "1.7.30",
   "me.tongfei"             % "progressbar"              % "0.9.3",
-  "de.tubs.cs.ias"         %% "plotalyzer"              % "0.1.1"
+  "de.halcony"             %% "plotalyzer"              % "1.0.1"
 )
 
 ThisBuild / resolvers ++= Seq(
